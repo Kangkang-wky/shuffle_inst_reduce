@@ -20,6 +20,9 @@ __device__ __forceinline__ void swap(float &a, float &b) {
   a = b;
   b = tmp;
 }
+
+// shuffle 多维数组规约, 有效利用 shuffle 指令带宽, 这样的做法可以让
+// 32 维数组规约用满 shuffle 指令的带宽.
 __device__ __forceinline__ void reduce_shfl_one(int lane_id, float &reg1,
                                                 float &reg2) {
 
