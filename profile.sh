@@ -1,1 +1,1 @@
-ncu --set full -o shuffle_inst_reduce ./main
+ncu --set full -o shuffle_inst_reduce_dim9 ./main
